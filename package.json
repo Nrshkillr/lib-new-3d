@@ -1,0 +1,58 @@
+{
+  "name": "liberty-enterprises-wholesale",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIBERTY ENTERPRISES — premium wholesale baby & kids products platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:production": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:generate:local": "prisma generate --schema prisma/schema.local.prisma",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "node prisma/seed.mjs",
+    "db:studio": "prisma studio",
+    "db:local": "node scripts/setup-local-db.mjs",
+    "migrate:crawl": "node scripts/crawl-legacy.mjs",
+    "migrate:report": "node scripts/build-migration-report.mjs"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "@react-three/fiber": "9.8.2",
+    "bcryptjs": "3.0.3",
+    "clsx": "2.1.1",
+    "cloudinary": "2.11.0",
+    "framer-motion": "14.8.0",
+    "lucide-react": "1.65.0",
+    "next": "16.4.3",
+    "next-auth": "5.0.0-beta.32",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "swiper": "14.3.0",
+    "tailwind-merge": "3.4.0",
+    "three": "0.187.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "24.9.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.186.0",
+    "prisma": "6.19.3",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
